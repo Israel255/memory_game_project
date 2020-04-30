@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -50,7 +51,7 @@ namespace memory_game_project
                 {
                     for (int y = 0; y < matrix.GetLength(1); y++)
                     {
-                        if (matrix[j,y] != 0)
+                        if (matrix[j, y] != 0)
                         {
                             Console.Write("x");
                         }
@@ -75,11 +76,11 @@ namespace memory_game_project
                             board = Convert.ToString(matrix[player_1_line, player_1_column]);
                             Console.Write(board);
                         }
-                        if (matrix[j, y] != 0 && player_1_line + player_1_column != j + y)
+                        else if (matrix[j, y] != 0)
                         {
                             Console.Write("x");
                         }
-                        else if (matrix[j,y] == 0)
+                        else if (matrix[j, y] == 0)
                         {
                             Console.Write("0");
                         }
@@ -99,7 +100,7 @@ namespace memory_game_project
                             board = Convert.ToString(matrix[player_1_second_line, player_1_second_column]);
                             Console.Write(board);
                         }
-                        if (matrix[j, y] != 0 && player_1_second_line +player_1_second_column != j + y)
+                        else if (matrix[j, y] != 0)
                         {
                             Console.Write("x");
                         }
@@ -155,7 +156,7 @@ namespace memory_game_project
                                 board = Convert.ToString(matrix[player_2_line, player_2_column]);
                                 Console.Write(board);
                             }
-                            if (matrix[j, y] != 0 && player_2_line + player_2_column != j + y)
+                            else if (matrix[j, y] != 0)
                             {
                                 Console.Write("x");
                             }
@@ -179,7 +180,7 @@ namespace memory_game_project
                                 board = Convert.ToString(matrix[player_2_second_line, player_2_second_column]);
                                 Console.Write(board);
                             }
-                            if (matrix[j, y] != 0 && player_2_second_line + player_2_second_column != j+y)
+                           else if (matrix[j, y] != 0)
                             {
                                 Console.Write("x");
                             }
